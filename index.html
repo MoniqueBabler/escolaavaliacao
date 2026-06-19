@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Turmas e Atividades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="menu">
+    <h2>Controle de Atividades</h2>
+
+    <button class="aba ativo" id="aba-turmas" onclick="mudar('turmas')">
+       Turmas
+    </button>
+
+    <button class="aba" id="aba-atividades" onclick="mudar('atividades')">
+       Atividades
+    </button>
+
+    <button class="aba" onclick="logout()">
+       Sair
+    </button>
+  </div>
+
+  <div class="content">
+
+  <div id="login">
+    <div class="box">
+      <h2>Login do Professor</h2>
+
+      <input id="email" placeholder="Email">
+      <input id="senha" type="password" placeholder="Senha">
+
+      <button class="btn btn-blue" onclick="login()">
+        Entrar
+      </button>
+
+      <!-- BOTÃO CERTO -->
+      <button class="btn btn-gray" onclick="mostrarCadastro()">
+        Cadastrar Professor
+      </button>
+
+    </div>
+  </div>
+
+  <!-- CADASTRO PROFESSOR (TELA OCULTA) -->
+  <div id="cadastroProfessor" style="display:none;">
+    <div class="box">
+
+      <h2>Cadastrar Professor</h2>
+
+      <input id="nomeProfessor" placeholder="Nome">
+      <input id="emailProfessor" placeholder="Email">
+      <input id="senhaProfessor" type="password" placeholder="Senha">
+
+      <button class="btn btn-green" onclick="cadastrarProfessor()">
+        Salvar
+      </button>
+
+      <button class="btn btn-gray" onclick="voltarLogin()">
+        Cancelar
+      </button>
+
+    </div>
+  </div>
+
+
+
+    <div id="turmas" style="display:none;">
+      <div class="box">
+        <h2>Turmas</h2>
+
+        <input id="nomeTurma" placeholder="Nome da turma">
+
+        <button class="btn btn-green" onclick="cadastrarTurma()">
+          Cadastrar Turma
+        </button>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="listaTurmas"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="atividades" style="display:none;">
+      <div class="box">
+        <h2>Atividades da Turma</h2>
+
+        <input id="descAtividade" placeholder="Descrição da atividade">
+        <input id="fimAtividade" type="date">
+
+        <button class="btn btn-green" onclick="cadastrarAtividade()">
+          Cadastrar Atividade
+        </button>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Descrição</th>
+              <th>Fim</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="listaAtividades"></tbody>
+        </table>
+
+        <button class="btn btn-gray" onclick="mudar('turmas')">
+          Voltar
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background: #fdf2f8;
+}
+
+/* MENU */
+.menu {
+  width: 280px;
+  background: linear-gradient(180deg, #111827, #1f2937);
+  color: white;
+  padding: 20px;
+}
+
+.menu h2 {
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.aba {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  color: #ddd;
+}
+
+.aba:hover {
+  background: rgba(244, 114, 182, 0.2);
+}
+
+.aba.ativo {
+  background: #ec4899;
+  color: white;
+}
+
+/* CONTEÚDO */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* BOX */
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  max-width: 1000px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* BOTÕES */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-blue { background: #ec4899; color: white; }
+.btn-green { background: #22c55e; color: white; }
+.btn-gray { background: #6b7280; color: white; }
+
+/* TABELA */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #111827;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* LOGIN CENTRAL */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
