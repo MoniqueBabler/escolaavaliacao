@@ -3,7 +3,7 @@ const API = "http://localhost:3000";
 let professorId = null;
 let turmaSelecionada = null;
 
-/* LOGIN */
+
 async function login() {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
@@ -26,12 +26,10 @@ async function login() {
   mudar("turmas");
 }
 
-/* NAVEGAÇÃO */
 function mudar(secao) {
   document.getElementById("turmas").style.display = "none";
   document.getElementById("atividades").style.display = "none";
 
-  // REMOVE ativo de todos os botões
   document.querySelectorAll(".aba").forEach(btn => {
     btn.classList.remove("ativo");
   });
@@ -49,7 +47,6 @@ function mudar(secao) {
   }
 }
 
-/* TURMAS */
 async function carregarTurmas() {
   const res = await fetch(`${API}/turmas/listar/${professorId}`);
   const dados = await res.json();
@@ -83,7 +80,6 @@ async function cadastrarTurma() {
   carregarTurmas();
 }
 
-/* CORREÇÃO IMPORTANTE */
 async function excluirTurma(id) {
   const res = await fetch(`${API}/turmas/excluir/${id}`, {
     method: "DELETE"
